@@ -1,0 +1,33 @@
+.clearfix
+  display: inline-block
+  &:after
+    content: "."
+    display: block
+    height:0
+    line-height: 0
+    clear: both
+    visibility: hidden
+
+border-2px($color,$right = false)
+  position: relative
+  &:after
+    display: block
+    position: absolute
+    bottom: 0
+    width: 16px
+    border-top: 2px solid $color
+    content: ' '
+    if $right
+      right: 2px
+
+
+.tangle-right
+  vertical-align: middle
+  font-size: 0
+  display: inline-block
+  width: 0
+  height: 0
+  margin-left: 6px
+  border-top: 2px solid transparent
+  border-left: 4px solid black
+  border-bottom: 2px solid transparent
