@@ -3,13 +3,15 @@
     <h1>{{ msg }}</h1>
     <h2>Essential Links</h2>
     <split></split>
-    <bordertrans></bordertrans>
+    <bord-trans></bord-trans>
   </div>
 </template>
 
 <script>
 import split from 'components/split/split';
-import bordertrans from 'components/border-trans/border-trans';
+import borderTrans from 'components/border-trans/border-trans';
+import Swipe from 'components/swipe/Swipe';
+import SwipeItem from 'components/swipe/SwipeItem';
 
 export default {
   name: 'hello',
@@ -26,7 +28,7 @@ export default {
   },
   components: {
     split,
-    bordertrans
+    borderTrans
   }
 };
 </script>

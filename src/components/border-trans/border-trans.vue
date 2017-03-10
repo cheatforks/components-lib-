@@ -1,5 +1,10 @@
 <template>
-    <div class="o-hover block wrap" ref="pos" :style="options" :class='{hover:ishover,tab:istab}' @mouseover="changehover" @mouseout="changehover"><slot></slot></div>
+    <!--suppress HtmlUnknownAttribute -->
+  <div class="o-hover block wrap" ref="pos" :style="options" :class='{hover:ishover,tab:istab}' @mouseover="changehover" @mouseout="changehover">
+      <slot>
+
+      </slot>
+    </div>
 </template>
 <style lang="stylus" rel="stylesheet/stylus" scoped>
 
