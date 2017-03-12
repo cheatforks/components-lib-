@@ -3,24 +3,24 @@
     <h1>{{ msg }}</h1>
     <h2>Essential Links</h2>
     <split></split>
-    <bord-trans></bord-trans>
+    <bordertrans></bordertrans>
+      <swipe></swipe>
   </div>
 </template>
 
 <script>
 import split from 'components/split/split';
-import borderTrans from 'components/border-trans/border-trans';
+import Bordertrans from 'components/border-trans/border-trans';
 import Swipe from 'components/swipe/Swipe';
-import SwipeItem from 'components/swipe/SwipeItem';
 
 export default {
   name: 'hello',
-  data () {
+  data() {
     return {
       msg: 'Welcome to Your Vue.js App'
     };
   },
-  created: function() {
+  created() {
     this.$http.get('/api/test').then((response) => {
       response = response.body;
       this.msg = response.data.name;
@@ -28,7 +28,8 @@ export default {
   },
   components: {
     split,
-    borderTrans
+    Bordertrans,
+    Swipe
   }
 };
 </script>
