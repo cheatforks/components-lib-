@@ -3,21 +3,23 @@
     <h1>{{ msg }}</h1>
     <h2>Essential Links</h2>
     <split></split>
-    <bordertrans></bordertrans>
+    <border-trans></border-trans>
       <swipe></swipe>
+    <img v-lazyload="src" src="../assets/logo.png" alt="懒加载测试">
   </div>
 </template>
 
 <script>
 import split from 'components/split/split';
-import Bordertrans from 'components/border-trans/border-trans';
+import BorderTrans from 'components/border-trans/border-trans';
 import Swipe from 'components/swipe/Swipe';
 
 export default {
   name: 'hello',
   data() {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Your Vue.js App',
+      src: require('../assets/logo.png')
     };
   },
   created() {
@@ -28,7 +30,7 @@ export default {
   },
   components: {
     split,
-    Bordertrans,
+    BorderTrans,
     Swipe
   }
 };
