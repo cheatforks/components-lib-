@@ -24,3 +24,22 @@ export function formatDate(date, fmt) {
 function padLeftZero(str) {
   return ('00' + str).substr(str.length);
 }
+
+/**
+ * 节流+去抖函数
+ */
+export function throttle(fn, delay, least) {
+  let timer = null;
+  let previous = null;
+  return function() {
+    let now =+new Date();
+    if (!previous) previous = now;
+    if (now - previous > least) {
+      fn();
+      previous = now;
+    } else {
+      clearTimeout(timer);
+      timer = setTimeout(fn, delay);
+    }
+  }
+}
